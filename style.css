@@ -1,0 +1,2129 @@
+:root{
+    --dark-purple: #2D1A73;
+    --heading-tex: #0B032E;
+    --short-text: #333333;
+    --button-color: #2D1A73;
+    --green-minor: #4FAD8B;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+   font-family: 'Lato', sans-serif;
+   font-family: 'Nunito', sans-serif;
+   overflow-y: scroll;
+}
+
+
+.topHeader{
+    width: 95%;
+    padding-left: 5%;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.bar1, .bar2{
+    border-radius: 25px;
+    height: 3px;
+    background-color: #9e9e9e;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+.bar1{
+    width: 40px;
+}
+.bar2{
+    width: 25px;
+    margin-left: 15px;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    width: 25px;
+    background-color: var(--dark-purple);
+  }
+
+  .change .bar2 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-4px, -4px);
+    background-color: var(--dark-purple);
+    margin-left: 0;
+  }
+
+.topHeader a{
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: var(--dark-purple);
+    text-decoration: none;
+}
+
+.topHeader a:hover{
+    color: var(--green-minor);
+}
+.socialTopLink{
+    display: none;
+    justify-content: space-between;
+}
+.mobileMenuBtn{
+    display: none;
+    position: absolute;
+    right: 11%;
+    top: 0;
+    margin-top: 2%;
+    z-index: 1;
+}
+
+.container{
+    width: 90%;
+    padding: 3% 5%;
+}
+
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 2% 5%;
+}
+
+.leftSideHeader{
+    width: 45%;
+    padding-top: 7%;
+}
+
+.leftSideHeader h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 4.3rem;
+    font-weight: 300;
+    color: var(--he9ading-tex);
+    margin-bottom: 7%;
+}
+
+.leftSideHeader h4{
+    color: var(--short-text);
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    width: 75%;
+    font-weight: 200;
+}
+.button-container{
+    width: 40%;
+    margin-top: 11%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.button-container button{
+    width: 100%;
+    height: 100%;
+    padding: 10% 0;
+    border: none;
+    background: var(--button-color);
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+     -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    border-radius: 10px;
+    -webkit-animation: ani 0.7s steps(5) forwards;
+    animation: ani 0.7s steps(5) forwards;
+    cursor: pointer;
+    
+}
+
+.button-container button:hover{
+    -webkit-animation: ani2 0.7s steps(5) forwards;
+    animation: ani2 0.7s steps(5) forwards;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 1px;
+    background: #ffffff;
+    border: 2px solid var(--green-minor);
+    color: var(--green-minor);
+}
+
+@-webkit-keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  @keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+
+  .rightSideHeader{
+      width: 45%;
+      background-color: #ccc4ef11;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-right: 0;
+      padding-top: 8%;
+      padding-bottom: 0;
+  }
+  .rightSideHeader img{
+      width: 85%;
+      margin-left: 15%;
+  }
+
+  .socialRing{
+      display: flex;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      position: absolute;
+      top: 40.5%;
+      left: 70.8%;
+      background-color: transparent;
+      animation: rotates 27s infinite linear;
+  }
+
+  .socialLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+
+
+  .socialLink img{
+      width: 60%;
+  }
+
+  #linkedin{
+      position: relative;
+      top: 22%;
+      transform: rotate(388deg) translate(10vw) rotate(-388deg);
+  }
+
+  #phone{
+    position: relative;
+    top: 65%;
+    transform: rotate(70deg) translate(3vw) rotate(-70deg);
+  }
+
+  #github{
+    position: relative;
+    top: -28%;
+  }
+
+  #linkedin img, #github img{
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #github:hover{
+    transition: all ease-in 300ms;
+    background-color: #1010102e;
+ 
+}
+
+#linkedin:hover{
+    transition: all ease-in 300ms;
+    background-color: #4461c02e;
+}
+
+#linkedin:hover img{
+    transition: all ease-out 300ms;
+    width: 70%;
+}
+
+  @-webkit-keyframes rotates {
+    from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes rotates {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+  }
+
+  .menuListDiiv{
+      width: 35%;
+      padding-left: 5%;
+  }
+
+ 
+  .desktopMenu{
+      width: 90%;
+      padding-right: 10%;
+      font-family: 'Nunito', sans-serif;
+      display: flex;
+      justify-content: flex-end;
+      transition: 1.5s;
+     }
+
+     .desktopMenu a{
+         font-size: 1.2rem;
+         color: #9e9e9e;
+         font-family: 'Nunito', sans-serif;
+         margin-left: 7%;
+         font-weight: 200;
+     }
+
+     .desktopMenu a:hover{
+         transition: color ease-in 300ms;
+         color: var(--heading-tex);
+     }
+
+     .aboutMeSection{
+         background-color: #F7F8FB;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+     }
+
+     .headingText{
+        font-family: 'Lato', sans-serif;
+         color: var(--heading-tex);
+         font-weight: 400;
+         font-size: 3rem;
+     }
+
+     .topAnimatedDiv{
+         width: 90%;
+         display: flex;
+         justify-content: space-between;
+     }
+
+     #lottie-controls, .toolbar{
+        display: none!important;
+     }
+
+     #cube-Animation{
+         margin-top: 7%;
+     }
+     .aboutTextDiv{
+        display: flex;
+         width: 100%;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         color: var(--short-text);
+         font-family: 'Nunito', sans-serif;
+     }
+
+     .mainAboutText{
+         width: 45%;
+     }
+
+     .mainAboutText h4{
+         font-size: 1.2rem;
+         line-height: 2.3rem;
+         font-weight: 200;
+     }
+
+     .bottomAnimatedDiv{
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .portfolioDiv-1{
+         width: 100%;
+         margin-top: 7%;
+         display: flex;
+     }
+     .portfolioDiv-2{
+         width: 100%;
+         display: flex;
+         margin-top: 4%;
+     }
+
+     .workDiv{
+         width: 25%;
+         display: flex;
+         flex-direction: column;
+         text-decoration: none;
+         background-color: #F7F8FB;
+         padding-bottom: 3%;
+     }
+
+     .workDiv img{
+         width: 100%;
+     }
+
+     .titleLink{
+         width: 90%;
+         display: flex;
+         justify-content: space-between;
+         padding: 2% 5%;
+         align-items: center;
+     }
+
+     .titleLink h3{
+         width: 80%;
+         font-size: 1.7rem;
+         font-family: 'Nunito', 'sans-serif';
+         color: var(--short-text);
+         font-weight: 200;
+     }
+
+     .arrowBtn{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         background-color: var(--green-minor);
+         text-align: center;
+         opacity: 0;
+     }
+    
+     .fa-location-arrow{
+         font-size: 1.3rem;
+         color: #ffffff;
+     }
+
+     .workDiv:hover .arrowBtn{
+        transition: opacity ease-in 300ms;
+        opacity: 1;
+     }
+
+     .workDiv:hover .titleLink h3{
+         transition: ease-in color 300ms;
+         color: #0B032E;
+         font-weight: 400;
+     }
+     .tools{
+         padding-left: 5%;
+         color: #a6a6a6;
+     }
+
+     #Data-R{
+         margin-left: 30%;
+         margin-top: 7%;
+     }
+
+     #twitterProject{
+         margin-left: 10%;
+         margin-top: 7%;
+     }
+
+     #Practice-R{
+         margin-left: 35%;
+     }
+     
+     .skillSet{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      
+     }
+
+     .skillRow{
+         width: 95%;
+         display: flex;
+         justify-content: space-evenly;
+         background-color: #F6F8FF;
+         padding: 3% 2.5%;
+         border-radius: 25px;
+         margin-top: 5%;
+     }
+
+     .flip-card{
+         width: 30%;
+         height: 300px;
+         perspective: 1000px;
+     }
+
+     .flip-card-inner{
+         width: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+     }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
+    .flip-card-back {
+        transform: rotateY(180deg);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
+
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus .flip-card-inner{
+    transform: rotateY(180deg);
+    }
+
+    .skillIcon{
+        width: 20%;
+        margin-bottom: 5%;
+    }
+
+    .flip-card-front h3{
+        font-size: 1.7rem;
+        font-weight: 200;
+    }
+
+    .flip-card-back h3{
+        font-weight: 200;
+        text-align: center;
+    }
+
+.footerSection{
+    margin-top: 5%;
+    background-color: var(--heading-tex);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.footerTitle{
+    color: #F6F8FF;
+}
+
+.contactDiv{
+    width: 70%;
+    display: flex;
+    margin-top: 8%;
+    justify-content: space-between;
+}
+
+.contactBtn{
+    width: 3%;
+    border: #F6F8FF 1px solid;
+    text-decoration: none;
+    color: #F7F8FB;
+    padding: 1.5% 2.5%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactBtn .fa-solid{
+    color: #F7F8FB;
+}
+
+.contactBtn span{
+    opacity: 0;
+}
+
+.contactBtn:hover{
+    transition: all ease-in 400ms;
+    width: 20%;
+    color: var(--green-minor);
+    border: var(--green-minor) 1px solid;
+}
+
+.contactBtn:hover .textContact{
+    transition: opacity 500ms ease-in;
+    opacity: 1;
+}
+
+.footerSocial{
+    text-decoration: none;
+    color: #48525E;
+    padding: 1.5% 2%;
+    font-size: 1.3rem;
+}
+
+.footerSocial:hover{
+    color: var(--green-minor);
+}
+
+.line{
+    width: 80%;
+    margin: 10% 10% 3% 10%;
+    border: 1px solid #616897;
+}
+
+small{
+    text-align: center;
+    color:#616897;
+    font-size: 1.1rem;
+    word-spacing: 5px;
+}
+
+.creditDiv{
+    width: 100%;
+    text-align: center;
+}
+
+small a{
+    color: var(--green-minor);
+    text-decoration: none;
+}
+
+.fa-heart{
+    color: #c07a17;
+}
+
+small a:hover{
+    transition: color ease-out 200ms;
+    color: #F7F8FB;
+}
+
+/* Media query */
+
+@media  screen 
+  and (min-device-width: 1023px) 
+  and (max-device-width: 1244px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+     
+    .socialRing{
+        width: 250px;
+        height: 250px;
+        left: 70%;
+        top: 30%;
+    }
+
+    .titleLink h3 {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .workDiv{
+        width: 35%;
+    }
+    #Data-R {
+        margin-left: 15%;
+    }
+    #Practice-R{
+        margin-left: 25%;
+    }
+    .titleLink h3 {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    #twitterProject {
+        margin-left: 5%;
+    }
+   
+  }
+
+  @media screen 
+  and (min-width: 1023px) 
+  and (max-width: 1244px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .socialRing{
+        width: 250px;
+        height: 250px;
+        left: 70%;
+        top: 30%;
+    }
+   
+    .titleLink h3 {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .workDiv{
+        width: 35%;
+    }
+    #Data-R {
+        margin-left: 15%;
+    }
+    #Practice-R{
+        margin-left: 25%;
+    }
+    .titleLink h3 {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    #twitterProject {
+        margin-left: 5%;
+    }
+  
+  }
+
+  @media  screen 
+  and (min-device-width: 900px) 
+  and (max-device-width: 1022px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .socialRing{
+        width: 250px;
+        height: 250px;
+        left: 65%;
+        top: 35%;
+    }
+
+    .rightSideHeader img {
+        margin-top: 30%;
+    }
+    .leftSideHeader h2 {
+        font-size: 3.5rem;
+    }
+    .leftSideHeader h4 {
+        width: 85%;
+        font-size: 1.4rem;
+    }
+    .button-container {
+        width: 50%;
+    }
+    .mainAboutText {
+        width: 65%;
+        padding-top: 3%;
+    }
+    .workDiv{
+        width: 40%;
+    }
+    #Data-R {
+        margin-left: 20%;
+    }
+    #Practice-R{
+        margin-left: 15%;
+    }
+    .titleLink h3 {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    #twitterProject {
+        margin-left: 5%;
+    }
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 35%;
+    }
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+  }
+
+  @media  screen 
+  and (min-width: 900px) 
+  and (max-width: 1022px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+    .socialRing{
+        width: 250px;
+        height: 250px;
+        left: 65%;
+        top: 35%;
+    }
+
+    .rightSideHeader img {
+        margin-top: 30%;
+    }
+    .leftSideHeader h2 {
+        font-size: 3.5rem;
+    }
+    .leftSideHeader h4 {
+        width: 85%;
+        font-size: 1.4rem;
+    }
+    .button-container {
+        width: 50%;
+    }
+    .mainAboutText {
+        width: 65%;
+        padding-top: 3%;
+    }
+    .workDiv{
+        width: 40%;
+    }
+    #Data-R {
+        margin-left: 20%;
+    }
+    #Practice-R{
+        margin-left: 15%;
+    }
+    .titleLink h3 {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    #twitterProject {
+        margin-left: 5%;
+    }
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 35%;
+    }
+  }
+
+  @media  screen 
+  and (min-device-width: 767px) 
+  and (max-device-width: 899px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .socialRing{
+        width: 250px;
+        height: 250px;
+        left: 60%;
+        top: 35%;
+    }
+
+    .rightSideHeader img {
+        margin-top: 30%;
+        width: 100%;
+        margin-left: 0;
+    }
+    .rightSideHeader {
+        width: 50%;
+    }
+    .socialLink {
+        width: 40px;
+        height: 40px;
+    }
+    .leftSideHeader h2 {
+        font-size: 3rem;
+    }
+    .leftSideHeader h4 {
+        font-size: 1.3rem;
+        width: 85%;
+    }
+    .button-container {
+        width: 55%;
+        margin-top: 12%;
+    }
+    .leftSideHeader {
+        margin-top: 10%;
+    }
+    .lotties{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .mainAboutText {
+        width: 75%;
+        padding-top: 3%;
+    }
+    .mainAboutText h4{
+        font-size: 1.1rem;
+    }
+    .workDiv{
+        width: 40%;
+    }
+    #Data-R {
+        margin-left: 15%;
+    }
+    #Practice-R{
+        margin-left: 15%;
+    }
+    .titleLink h3 {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    #twitterProject {
+        margin-left: 5%;
+    }
+    .arrowBtn {
+        width: 30px;
+        height: 30px;
+    }
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+    .menuListDiiv {
+        width: 45%;
+    }
+    .flip-card-front h3 {
+        font-size: 1.5rem;
+    }
+    .contactDiv {
+        width: 100%;
+    }
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 30%;
+    }
+    .headingText{
+        font-size: 2.5rem;
+    }
+  }
+
+  @media  screen 
+  and (min-width: 767px) 
+  and (max-width: 899px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .socialRing{
+        width: 250px;
+        height: 250px;
+        left: 60%;
+        top: 35%;
+    }
+
+    .rightSideHeader img {
+        margin-top: 30%;
+        width: 100%;
+        margin-left: 0;
+    }
+    .rightSideHeader {
+        width: 50%;
+    }
+    .socialLink {
+        width: 40px;
+        height: 40px;
+    }
+    .leftSideHeader h2 {
+        font-size: 3rem;
+    }
+    .leftSideHeader h4 {
+        font-size: 1.3rem;
+        width: 85%;
+    }
+    .button-container {
+        width: 55%;
+        margin-top: 12%;
+    }
+    .leftSideHeader {
+        margin-top: 10%;
+    }
+    .lotties{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .mainAboutText {
+        width: 75%;
+        padding-top: 3%;
+    }
+    .mainAboutText h4{
+        font-size: 1.1rem;
+    }
+    .workDiv{
+        width: 40%;
+    }
+    #Data-R {
+        margin-left: 15%;
+    }
+    #Practice-R{
+        margin-left: 15%;
+    }
+    .titleLink h3 {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    #twitterProject {
+        margin-left: 5%;
+    }
+    .arrowBtn {
+        width: 30px;
+        height: 30px;
+    }
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+    .menuListDiiv {
+        width: 45%;
+    }
+    .flip-card-front h3 {
+        font-size: 1.5rem;
+    }
+    .contactDiv {
+        width: 100%;
+    }
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 30%;
+    }
+    .headingText{
+        font-size: 2.5rem;
+    }
+  }
+
+  @media screen 
+  and (min-device-width: 600px) 
+  and (max-device-width: 766px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .rightSideHeader {
+        display: none;
+    }
+    .leftSideHeader h2 {
+        font-size: 3rem;
+    }
+    .leftSideHeader h4 {
+        font-size: 1.3rem;
+        width: 85%;
+    }
+    .button-container {
+        width: 40%;
+        margin-top: 12%;
+        margin-bottom: 7%;
+    }
+    .button-container button {
+        padding: 7% 0;
+    }
+    .leftSideHeader {
+        width: 90%;
+        margin-top: 10%;
+    }
+    .lotties{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .mainAboutText {
+        width: 85%;
+        padding-top: 10%;
+    }
+    .mainAboutText h4{
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+    .workDiv{
+        width: 80%;
+    }
+    #Data-R {
+        margin-left: 0%;
+       
+    }
+    #Practice-R{
+        margin-left: 0%;
+        margin-top: 7%;
+    }
+    .titleLink h3 {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    #twitterProject {
+        margin-left: 0%;
+    }
+    .arrowBtn {
+        width: 30px;
+        height: 30px;
+    }
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+    .menuListDiiv {
+       transition: 1s;
+       width: 100%;
+    }
+    .mobileMenuBtn{
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+        justify-content: right;
+        z-index: 2;
+    }
+    
+    .flip-card-front h3 {
+        font-size: 1.5rem;
+    }
+    .contactDiv {
+        width: 100%;
+    }
+    .contactDiv a{
+        margin-top: 7%;
+    }
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 35%;
+    }
+    .headingText{
+        font-size: 2.1rem;
+    }
+    .portfolioDiv-1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12%;
+    }
+    .portfolioDiv-2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+    .skillRow{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flip-card {
+        width: 80%;
+        height: 300px;
+    }
+
+    .desktopMenu{
+        transition: 1s;
+        position: absolute;
+        width: 50%;
+        margin-top:6% ;
+        display: none;
+        flex-direction: column;
+        background-color: #423c5f;
+        padding: 5% 0;
+        right: 0;
+        }
+    .show{
+        display: flex;
+    }
+
+    .desktopMenu a{
+        font-size: 1.5rem;
+        margin: 4% 5%;
+        color: #ffffff;
+    }
+    
+    .socialTopLink{
+        display: block;
+        transition: 1s;
+        margin-top: 10%;
+    }
+    .socialTopLink a i{
+        font-size: 1.9rem;
+        color: #ffffff;
+    }
+    .skillSet{
+        margin-top: 10%;
+    }
+}
+
+@media screen 
+and (min-width: 600px) 
+and (max-width: 766px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+    
+  .rightSideHeader {
+      display: none;
+  }
+  .leftSideHeader h2 {
+      font-size: 3rem;
+  }
+  .leftSideHeader h4 {
+      font-size: 1.3rem;
+      width: 85%;
+  }
+  .button-container {
+      width: 40%;
+      margin-top: 12%;
+      margin-bottom: 7%;
+  }
+  .button-container button {
+      padding: 7% 0;
+  }
+  .leftSideHeader {
+      width: 90%;
+      margin-top: 10%;
+  }
+  .lotties{
+      width: 200px !important;
+      height: 200px !important;
+  }
+  .mainAboutText {
+      width: 85%;
+      padding-top: 10%;
+  }
+  .mainAboutText h4{
+      font-size: 0.9rem;
+      line-height: 1.6rem;
+  }
+  .workDiv{
+      width: 80%;
+  }
+  #Data-R {
+      margin-left: 0%;
+     
+  }
+  #Practice-R{
+      margin-left: 0%;
+      margin-top: 7%;
+  }
+  .titleLink h3 {
+      width: 90%;
+      font-size: 1.2rem;
+  }
+  #twitterProject {
+      margin-left: 0%;
+  }
+  .arrowBtn {
+      width: 30px;
+      height: 30px;
+  }
+  .fa-location-arrow{
+      font-size: 0.9rem;
+  }
+  .menuListDiiv {
+     transition: 1s;
+     width: 100%;
+  }
+  .mobileMenuBtn{
+      display: flex;
+      flex-direction: column;
+      transition: 0.5s;
+      justify-content: right;
+      z-index: 2;
+  }
+  
+  .flip-card-front h3 {
+      font-size: 1.5rem;
+  }
+  .contactDiv {
+      width: 100%;
+  }
+  .contactDiv a{
+      margin-top: 7%;
+  }
+  .contactBtn:hover {
+      transition: all ease-in 400ms;
+      width: 35%;
+  }
+  .headingText{
+      font-size: 2.1rem;
+  }
+  .portfolioDiv-1{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12%;
+  }
+  .portfolioDiv-2{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;   
+  }
+  .skillRow{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .flip-card {
+      width: 80%;
+      height: 300px;
+  }
+
+  .desktopMenu{
+      transition: 1s;
+      position: absolute;
+      width: 50%;
+      margin-top:6% ;
+      display: none;
+      flex-direction: column;
+      background-color: #423c5f;
+      padding: 5% 0;
+      right: 0;
+      }
+  .show{
+      display: flex;
+  }
+
+  .desktopMenu a{
+      font-size: 1.5rem;
+      margin: 4% 5%;
+      color: #ffffff;
+  }
+  
+  .socialTopLink{
+      display: block;
+      transition: 1s;
+      margin-top: 10%;
+  }
+  .socialTopLink a i{
+      font-size: 1.9rem;
+      color: #ffffff;
+  }
+  .skillSet{
+      margin-top: 10%;
+  }
+}
+
+
+
+@media screen 
+and (min-device-width: 450px) 
+and (max-device-width: 599px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    
+  .rightSideHeader {
+    display: none;
+}
+.leftSideHeader h2 {
+    font-size: 3rem;
+}
+.leftSideHeader h4 {
+    font-size: 1.3rem;
+    width: 90%;
+}
+.button-container {
+    width: 60%;
+    margin-top: 12%;
+    margin-bottom: 7%;
+}
+.button-container button {
+    padding: 7% 0;
+}
+.leftSideHeader {
+    width: 90%;
+    margin-top: 10%;
+}
+.lotties{
+    width: 200px !important;
+    height: 200px !important;
+}
+.mainAboutText {
+    width: 85%;
+    padding-top: 10%;
+}
+.mainAboutText h4{
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+.workDiv{
+    width: 80%;
+}
+#Data-R {
+    margin-left: 0%;
+   
+}
+#Practice-R{
+    margin-left: 0%;
+    margin-top: 7%;
+}
+.titleLink h3 {
+    width: 90%;
+    font-size: 1.2rem;
+}
+#twitterProject {
+    margin-left: 0%;
+}
+.arrowBtn {
+    width: 30px;
+    height: 30px;
+}
+.fa-location-arrow{
+    font-size: 0.9rem;
+}
+.menuListDiiv {
+   transition: 1s;
+   width: 100%;
+}
+.mobileMenuBtn{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    justify-content: right;
+    z-index: 2;
+}
+
+.flip-card-front h3 {
+    font-size: 1.5rem;
+}
+.contactDiv {
+    width: 100%;
+    flex-direction: column;
+}
+.contactDiv a{
+    margin-top: 7%;
+}
+.contactBtn{
+    width: 35%;
+}
+.contactBtn:hover {
+    transition: all ease-in 400ms;
+    width: 50%;
+}
+.headingText{
+    font-size: 2.1rem;
+}
+.portfolioDiv-1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+}
+.portfolioDiv-2{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.skillRow{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flip-card {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 5%;
+}
+
+.desktopMenu{
+    transition: 1s;
+    position: absolute;
+    width: 80%;
+    margin-top:10% ;
+    display: none;
+    flex-direction: column;
+    background-color: #423c5f;
+    padding: 5% 0;
+    right: 0;
+    }
+.show{
+    display: flex;
+}
+
+.desktopMenu a{
+    font-size: 1.5rem;
+    margin: 4% 5%;
+    color: #ffffff;
+}
+
+.socialTopLink{
+    display: block;
+    transition: 1s;
+    margin-top: 10%;
+}
+.socialTopLink a i{
+    font-size: 1.9rem;
+    color: #ffffff;
+}
+.skillSet{
+    margin-top: 10%;
+}
+}
+
+@media screen 
+and (min-width: 450px) 
+and (max-width: 599px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    
+  .rightSideHeader {
+    display: none;
+}
+.leftSideHeader h2 {
+    font-size: 3rem;
+}
+.leftSideHeader h4 {
+    font-size: 1.3rem;
+    width: 90%;
+}
+.button-container {
+    width: 60%;
+    margin-top: 12%;
+    margin-bottom: 7%;
+}
+.button-container button {
+    padding: 7% 0;
+}
+.leftSideHeader {
+    width: 90%;
+    margin-top: 10%;
+}
+.lotties{
+    width: 200px !important;
+    height: 200px !important;
+}
+.mainAboutText {
+    width: 85%;
+    padding-top: 10%;
+}
+.mainAboutText h4{
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+.workDiv{
+    width: 80%;
+}
+#Data-R {
+    margin-left: 0%;
+   
+}
+#Practice-R{
+    margin-left: 0%;
+    margin-top: 7%;
+}
+.titleLink h3 {
+    width: 90%;
+    font-size: 1.2rem;
+}
+#twitterProject {
+    margin-left: 0%;
+}
+.arrowBtn {
+    width: 30px;
+    height: 30px;
+}
+.fa-location-arrow{
+    font-size: 0.9rem;
+}
+.menuListDiiv {
+   transition: 1s;
+   width: 100%;
+}
+.mobileMenuBtn{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    justify-content: right;
+    z-index: 2;
+}
+
+.flip-card-front h3 {
+    font-size: 1.5rem;
+}
+.contactDiv {
+    width: 100%;
+    flex-direction: column;
+}
+.contactDiv a{
+    margin-top: 7%;
+}
+.contactBtn{
+    width: 35%;
+}
+.contactBtn:hover {
+    transition: all ease-in 400ms;
+    width: 50%;
+}
+.headingText{
+    font-size: 2.1rem;
+}
+.portfolioDiv-1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+}
+.portfolioDiv-2{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.skillRow{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flip-card {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 5%;
+}
+
+.desktopMenu{
+    transition: 1s;
+    position: absolute;
+    width: 80%;
+    margin-top:10% ;
+    display: none;
+    flex-direction: column;
+    background-color: #423c5f;
+    padding: 5% 0;
+    right: 0;
+    }
+.show{
+    display: flex;
+}
+
+.desktopMenu a{
+    font-size: 1.5rem;
+    margin: 4% 5%;
+    color: #ffffff;
+}
+
+.socialTopLink{
+    display: block;
+    transition: 1s;
+    margin-top: 10%;
+}
+.socialTopLink a i{
+    font-size: 1.9rem;
+    color: #ffffff;
+}
+.skillSet{
+    margin-top: 10%;
+}
+}
+
+
+@media screen 
+and (min-device-width: 350px) 
+and (max-device-width: 449px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+    .rightSideHeader {
+        display: none;
+    }
+    .topHeader{
+        padding: 5% 5%;
+    }
+    .leftSideHeader{
+        margin-top: 15%;
+    }
+    .leftSideHeader h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10%;
+    }
+    .leftSideHeader h4 {
+        font-size: 1.2rem;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .button-container {
+        width: 70%;
+        margin-top: 12%;
+        margin-bottom: 20%;
+    }
+    .button-container button {
+        padding: 11% 0;
+        font-size: 1rem;
+    }
+    .leftSideHeader {
+        width: 90%;
+        margin-top: 10%;
+    }
+    .lotties{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .mainAboutText {
+        width: 90%;
+        padding-top: 25%;
+    }
+    .mainAboutText h4{
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+    .workDiv{
+        width: 80%;
+        margin-bottom: 10%;
+    }
+    #Data-R {
+        margin-left: 0%;
+       
+    }
+    #Practice-R{
+        margin-left: 0%;
+        margin-top: 7%;
+    }
+    .titleLink h3 {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    #twitterProject {
+        margin-left: 0%;
+    }
+    .arrowBtn {
+        width: 30px;
+        height: 30px;
+    }
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+    .menuListDiiv {
+       transition: 1s;
+       width: 100%;
+    }
+    .mobileMenuBtn{
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+        justify-content: right;
+        z-index: 2;
+        top: 15%;
+    }
+    
+    .flip-card-front h3 {
+        font-size: 1.5rem;
+    }
+    .contactDiv {
+        width: 100%;
+        flex-direction: column;
+    }
+    .contactDiv a{
+        margin-top: 7%;
+    }
+    .contactBtn{
+        width: 35%;
+    }
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 50%;
+    }
+    .headingText{
+        font-size: 2.1rem;
+    }
+    .portfolioDiv-1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 22%;
+    }
+    .portfolioDiv-2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+    .skillRow{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flip-card {
+        width: 80%;
+        height: 250px;
+        margin-bottom: 5%;
+    }
+    
+    .desktopMenu{
+        transition: 1s;
+        position: absolute;
+        width: 85%;
+        margin-top:10% ;
+        display: none;
+        flex-direction: column;
+        background-color: #423c5f;
+        padding: 5% 0;
+        right: 0;
+        }
+    .show{
+        display: flex;
+    }
+    
+    .desktopMenu a{
+        font-size: 1.5rem;
+        margin: 4% 5%;
+        color: #ffffff;
+    }
+    
+    .socialTopLink{
+        display: block;
+        transition: 1s;
+        margin-top: 10%;
+    }
+    .socialTopLink a i{
+        font-size: 1.9rem;
+        color: #ffffff;
+    }
+    .skillSet{
+        margin-top: 10%;
+    }
+    .topAnimatedDiv{
+        margin-top: 20%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen 
+and (min-width: 350px) 
+and (max-width: 449px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+    .rightSideHeader {
+        display: none;
+    }
+    .topHeader{
+        padding: 5% 5%;
+    }
+    .leftSideHeader{
+        margin-top: 15%;
+    }
+    .leftSideHeader h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10%;
+    }
+    .leftSideHeader h4 {
+        font-size: 1.2rem;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .button-container {
+        width: 70%;
+        margin-top: 12%;
+        margin-bottom: 20%;
+    }
+    .button-container button {
+        padding: 11% 0;
+        font-size: 1rem;
+    }
+    .leftSideHeader {
+        width: 90%;
+        margin-top: 10%;
+    }
+    .lotties{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .mainAboutText {
+        width: 90%;
+        padding-top: 25%;
+    }
+    .mainAboutText h4{
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+    .workDiv{
+        width: 80%;
+        margin-bottom: 10%;
+    }
+    #Data-R {
+        margin-left: 0%;
+       
+    }
+    #Practice-R{
+        margin-left: 0%;
+        margin-top: 7%;
+    }
+    .titleLink h3 {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    #twitterProject {
+        margin-left: 0%;
+    }
+    .arrowBtn {
+        width: 30px;
+        height: 30px;
+    }
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+    .menuListDiiv {
+       transition: 1s;
+       width: 100%;
+    }
+    .mobileMenuBtn{
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+        justify-content: right;
+        z-index: 2;
+        top: 15%;
+    }
+    
+    .flip-card-front h3 {
+        font-size: 1.5rem;
+    }
+    .contactDiv {
+        width: 100%;
+        flex-direction: column;
+    }
+    .contactDiv a{
+        margin-top: 7%;
+    }
+    .contactBtn{
+        width: 35%;
+    }
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 50%;
+    }
+    .headingText{
+        font-size: 2.1rem;
+    }
+    .portfolioDiv-1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 22%;
+    }
+    .portfolioDiv-2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+    .skillRow{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flip-card {
+        width: 80%;
+        height: 250px;
+        margin-bottom: 5%;
+    }
+    
+    .desktopMenu{
+        transition: 1s;
+        position: absolute;
+        width: 85%;
+        margin-top:10% ;
+        display: none;
+        flex-direction: column;
+        background-color: #423c5f;
+        padding: 5% 0;
+        right: 0;
+        }
+    .show{
+        display: flex;
+    }
+    
+    .desktopMenu a{
+        font-size: 1.5rem;
+        margin: 4% 5%;
+        color: #ffffff;
+    }
+    
+    .socialTopLink{
+        display: block;
+        transition: 1s;
+        margin-top: 10%;
+    }
+    .socialTopLink a i{
+        font-size: 1.9rem;
+        color: #ffffff;
+    }
+    .skillSet{
+        margin-top: 10%;
+    }
+    .topAnimatedDiv{
+        margin-top: 20%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen 
+and (min-device-width: 250px) 
+and (max-device-width: 349px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+    .rightSideHeader {
+        display: none;
+    }
+    .topHeader{
+        padding: 5% 5%;
+    }
+    .leftSideHeader{
+       padding-top: 25%;
+    }
+    .leftSideHeader h2 {
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+    .leftSideHeader h4 {
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 10%;
+        line-height: 1.7rem;
+    }
+    .button-container {
+        width: 100%;
+        margin-top: 22%;
+        margin-bottom: 20%;
+    }
+    .button-container button {
+        padding: 7% 0;
+        font-size: 1rem;
+    }
+    .leftSideHeader {
+        width: 90%;
+        margin-top: 10%;
+    }
+    .lotties{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .mainAboutText {
+        width: 90%;
+        padding-top: 35%;
+    }
+    .mainAboutText h4{
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    .workDiv{
+        width: 90%;
+        margin-bottom: 10%;
+        padding-bottom: 7%;
+    }
+    #Data-R {
+        margin-left: 0%;
+       
+    }
+   
+    #Practice-R{
+        margin-left: 0%;
+        margin-top: 7%;
+    }
+    .titleLink h3 {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .tools{
+        font-size: 0.8rem;
+    }
+    #twitterProject {
+        margin-left: 0%;
+    }
+    .arrowBtn {
+        width: 30px;
+        height: 30px;
+    }
+    .fa-location-arrow{
+        font-size: 0.9rem;
+    }
+    .menuListDiiv {
+       transition: 1s;
+       width: 100%;
+    }
+    .mobileMenuBtn{
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+        justify-content: right;
+        z-index: 2;
+        top: 15%;
+    }
+    
+    .flip-card-front h3 {
+        font-size: 1.2rem;
+    }
+    .flip-card-back h3 {
+        font-size: 1rem;
+    }
+    .contactDiv {
+        width: 100%;
+        flex-direction: column;
+    }
+    .contactDiv a{
+        margin-top: 15%;
+    }
+    .contactBtn{
+        width: 90%;
+        padding: 5%;
+    }
+
+    .contactBtn:hover {
+        transition: all ease-in 400ms;
+        width: 90%;
+    }
+    
+    .contactBtn span{
+        opacity: 1;
+    }
+    .headingText{
+        font-size: 1.7rem;
+    }
+    .portfolioDiv-1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 33%;
+    }
+    .portfolioDiv-2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+    }
+    .skillRow{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20% 0;
+        width: 100%;
+    }
+    .flip-card {
+        width: 80%;
+        height: 250px;
+        margin-bottom: 5%;
+    }
+    
+    .desktopMenu{
+        transition: 1s;
+        position: absolute;
+        width: 100%;
+        margin-top: 15%;
+        display: none;
+        flex-direction: column;
+        background-color: #423c5f;
+        padding: 5% 0;
+        right: 0;
+        }
+
+    .show{
+        display: flex;
+    }
+    
+    .desktopMenu a{
+        font-size: 1.5rem;
+        margin: 4% 5%;
+        color: #ffffff;
+    }
+    
+    .socialTopLink{
+        display: block;
+        transition: 1s;
+        margin-top: 10%;
+    }
+    .socialTopLink a i{
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+    .skillSet{
+        margin-top: 10%;
+    }
+    .topAnimatedDiv{
+        margin-top: 20%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footerSection{
+        margin-top: 15%;
+    }
+    small{
+        font-size: 0.8rem;
+    }
+    .line{
+        width: 905;
+    }
+    .footerTitle{
+        text-align: center;
+    }
+}
